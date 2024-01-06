@@ -10,26 +10,19 @@
 <body>
     <div class="todo">
         <h2>
-            To-Do List
+           Liste de choses à faire
         </h2>
         <div class="barre">
-            <input type="text" name="" id="barreInput" placeholder="add your task">
-            <input type="submit" value="Add" id="btnAdd">
+            <input type="text" name="" id="barreInput" placeholder="Ajoutez votre tache ">
+            <button id="btnAdd" onclick="addTask()">Ajouter</button>
         </div>
-        <div class="taches" id="liste">
-            
-            <!--ici vienne se mettre les taches-->
-            
-        </div>
+        
+        <ul>
+            <!-- <li class="checked">task 1</li>
+            <li>task 2</li>
+            <li>task 3</li> -->
+        </ul> 
+        
     </div>
 </body>
-<template class="tache">
-    <div id="tache1" class="tache">
-        <div>
-            <input type="checkbox" name="" id="tache1">
-            <label for="tache1">tache 1</label>
-        </div>
-        <img src="close_FILL0_wght400_GRAD0_opsz24.png" alt="marche pas">
-    </div>
-</template>
 </html>

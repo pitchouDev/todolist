@@ -21,7 +21,8 @@ body {
 }
 
 .todo {
-    width: 35%;
+    width: 80%;
+    max-width: 450px;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -49,47 +50,68 @@ body {
     width: 70%;
     padding-left: 30px;
     font-size: 1.1em;
+    outline: none;
 }
 
-#barreInput, .barre input[value="Add"] {
+#barreInput, #btnAdd {
     border: none;
     background-color: rgba(0, 0, 0, 0);
     border-radius: 50px;
 }
 
-.barre input[value="Add"] {
+#btnAdd {
     color: white;
     background-color: orangered;
     width: 30%;
 }
 
-.barre input[value="Add"]:hover {
+#btnAdd:hover {
     cursor: pointer;
     background-color: rgba(255, 69, 0, 0.8);
 }
 
-.tache {
-    margin: 20px;
-    display: flex;
-    justify-content: space-between;
+ul li {
+    list-style: none;
+    padding: 20px 10px;
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
 }
 
-.tache label {
-    margin-left: 30px;
+ul li::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: url("images/unchecked.png");
+    background-size: cover;
+    top: 17px;
+    left: -30px;
 }
 
-.tache img {
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background: url("images/checked.png");
+    background-size: cover;
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    color: #555;    
+    text-align: center;
     border-radius: 25px;
 }
 
-.tache img:hover {
-    background: rgb(201, 201, 201);
-    cursor: pointer;
+ul li span:hover {
+    background: #edeef0;
 }
-
-@media screen and (max-width: 700px) {
-    .todo {
-        width: 80%;
-    }
-}
-
